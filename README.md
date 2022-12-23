@@ -1,4 +1,4 @@
-# bokeh-plots
+# Bokeh Plots
 Examples I wrote to refer back to for data visualization with bokeh
 
 # Bar Graph
