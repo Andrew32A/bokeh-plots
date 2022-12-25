@@ -9,18 +9,18 @@ source = ColumnDataSource(data = dict(
 
 # instantiate figure properties
 tools = "box_zoom, undo, crosshair, lasso_select"
-p = figure(tools=tools,title='Row-by-Row Overscan: ITL', x_axis_label='Read Noise [ADU]',y_axis_label='StdDev of Row Means [ADU]') 
+p = figure(tools=tools, title='Row-by-Row Overscan: ITL', x_axis_label='Read Noise [ADU]', y_axis_label='StdDev of Row Means [ADU]') 
 
 # add hovertool
 p.add_tools(
     HoverTool(
-        tooltips = [('x', "@m_e_stdrows_mc"),
+        tooltips = [('x', '@m_e_stdrows_mc'),
                     ('y', '@m_e_stdrows_row')]
     )
 )
 
 # draw scatter plot
-p.scatter("m_e_stdrows_mc", "m_e_stdrows_row", alpha=0.5, source = source)
+p.scatter('m_e_stdrows_mc', 'm_e_stdrows_row', alpha=0.5, source=source)
 
 # range values
 p.x_range = Range1d(0, 15)
